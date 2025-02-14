@@ -16,7 +16,7 @@ class DonutTab extends StatelessWidget {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 0.8,
+        childAspectRatio: 1 / 1.5,
         //Opcional, ajusta la forma de los elementos 
         ),
         //Cuantos elementos

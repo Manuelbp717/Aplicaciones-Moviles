@@ -33,7 +33,7 @@ class DonutTile extends StatelessWidget {
                   )
                 ),
                 padding: 
-                const EdgeInsets.symmetric(vertical: 8,horizontal: 18),
+                const EdgeInsets.symmetric(vertical: 8,horizontal: 16),
                 child: Text('\$$donutPrice',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -45,13 +45,40 @@ class DonutTile extends StatelessWidget {
           ),
           Padding(
             padding: const  EdgeInsets.symmetric(
-              horizontal: 40, vertical: 12
+              horizontal: 32, vertical: 11
             ),
             child: Image.asset(imageName)
-            ,)
+            ,),
             //Tarea: Texto del sabor del producto
+            Text(donutFlavor,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+            ),
+            ),
+            const SizedBox(height: 4),
+            Text('Dunkins',
+            style: TextStyle(
+                color: Colors.grey[700]
+            ),
+            ),
 
             //Tarea: Iconos de me gusta y agregar a productos
+            //const SizedBox(height: 12),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.pink[400]),
+                  Icon(
+                    Icons.add,
+                    color: Colors.grey[700],),
+                ],
+              )
+            )
         ],
         )
       )
