@@ -17,23 +17,23 @@ class _HomepageState extends State<Homepage> {
   List<Widget> myTabs = [
     //donut tab
     const MyTab(
-      iconPath: 'lib/icons/donut.png',
+      iconPath: 'lib/icons/donut.png', tabName: 'Donuts',
     ),
     //burger
     const MyTab(
-      iconPath: 'lib/icons/burger.png',
+      iconPath: 'lib/icons/burger.png', tabName: 'Burger',
     ),
     //smothie
     const MyTab(
-      iconPath: 'lib/icons/smoothie.png',
+      iconPath: 'lib/icons/smoothie.png',tabName: 'Smoothie',
     ),
     //pancake
     const MyTab(
-      iconPath: 'lib/icons/pancakes.png',
+      iconPath: 'lib/icons/pancakes.png',tabName: 'Pancakes',
     ),
     //pizza
     const MyTab(
-      iconPath: 'lib/icons/pizza.png',
+      iconPath: 'lib/icons/pizza.png',tabName: 'Pizza',
     ),
   ];
   //donut tab
@@ -84,7 +84,9 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
             //Tab bar
-            TabBar(tabs: myTabs),
+            TabBar(tabs: myTabs,
+            labelColor: Colors.pink,
+            unselectedLabelColor: Colors.grey,),
 
             //Tap bar view
 	          Expanded(child:TabBarView(
@@ -92,6 +94,44 @@ class _HomepageState extends State<Homepage> {
             DonutTab(),BurgerTab(),SmoothieTab(),PanCakeTab(),PizzaTab()]
             )),
             //Carrito
+            Container(
+              color: Colors.white,
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Padding(padding: EdgeInsets.only(left: 28),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("2 Items | \$45",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),
+                      ),
+                      Text("",
+                      style: TextStyle(
+                      fontSize: 12,
+                      ),)
+                    ],
+                  ),
+                  ),
+                  ElevatedButton(
+                    onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.pink,
+                    ),
+                   child: const Text("View Cart",
+                   style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                   ),
+                   ),
+                   )
+                ],
+              ),
+            )
           ],
         ),
       ),
