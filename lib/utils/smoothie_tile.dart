@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BurgerTile extends StatelessWidget {
+class SmoothieTile extends StatelessWidget {
 
-    final String burgerFlavor;
-    final String burgerPrice;
-    final dynamic burgerColor;
+    final String smoothieFlavor;
+    final String smoothiePrice;
+    final dynamic smoothieColor;
     final String imageName;
 
-  const BurgerTile({super.key, required this.burgerFlavor, required this.burgerPrice, required this.burgerColor, required this.imageName});
+  const SmoothieTile({super.key, required this.smoothieFlavor, required this.smoothiePrice, required this.smoothieColor, required this.imageName});
 
     final double borderRadius = 24;
   @override
@@ -16,7 +16,7 @@ class BurgerTile extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Container(
           decoration: BoxDecoration(
-            color: burgerColor[100],
+            color: smoothieColor[100],
             borderRadius: BorderRadius.circular(borderRadius)
           ),
         child: Column(
@@ -27,30 +27,30 @@ class BurgerTile extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: burgerColor[350],
+                  color: smoothieColor[350],
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(borderRadius)
                   )
                 ),
                 padding: 
                 const EdgeInsets.symmetric(vertical: 8,horizontal: 16),
-                child: Text('\$$burgerPrice',
+                child: Text('\$$smoothiePrice',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
-                  color: burgerColor[800]
+                  color: smoothieColor[800]
                 ),),
               )
             ],
           ),
           Padding(
             padding: const  EdgeInsets.symmetric(
-              horizontal: 32, vertical: 11
+              horizontal: 33, vertical: 11
             ),
             child: Image.asset(imageName)
             ,),
             //Tarea: Texto del sabor del producto
-            Text(burgerFlavor,
+            Text(smoothieFlavor,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,

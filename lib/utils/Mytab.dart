@@ -22,8 +22,9 @@ class MyTab extends StatelessWidget {
                 boxShadow: const [
                   BoxShadow(
                     color: Colors.black,
-                    spreadRadius: 5,
-                    blurRadius: 7,
+                    spreadRadius: 2,
+                    blurRadius: 4,
+                    offset: Offset(1, 2)
                   ),
                 ],
                 color: Colors.grey[200],
@@ -34,11 +35,13 @@ class MyTab extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(height: 4),
         Text(
           tabName,
           style: const TextStyle(
             fontSize: 8.0,),
         ),
+        const SizedBox(height: 4),
       ],
     );
   }

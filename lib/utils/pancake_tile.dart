@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BurgerTile extends StatelessWidget {
+class PancakeTile extends StatelessWidget {
 
-    final String burgerFlavor;
-    final String burgerPrice;
-    final dynamic burgerColor;
+    final String pancakeFlavor;
+    final String pancakePrice;
+    final dynamic pancakeColor;
     final String imageName;
 
-  const BurgerTile({super.key, required this.burgerFlavor, required this.burgerPrice, required this.burgerColor, required this.imageName});
+  const PancakeTile({super.key, required this.pancakeFlavor, required this.pancakePrice, required this.pancakeColor, required this.imageName});
 
     final double borderRadius = 24;
   @override
@@ -16,7 +16,7 @@ class BurgerTile extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Container(
           decoration: BoxDecoration(
-            color: burgerColor[100],
+            color: pancakeColor[100],
             borderRadius: BorderRadius.circular(borderRadius)
           ),
         child: Column(
@@ -27,18 +27,18 @@ class BurgerTile extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: burgerColor[350],
+                  color: pancakeColor[350],
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(borderRadius)
                   )
                 ),
                 padding: 
                 const EdgeInsets.symmetric(vertical: 8,horizontal: 16),
-                child: Text('\$$burgerPrice',
+                child: Text('\$$pancakePrice',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
-                  color: burgerColor[800]
+                  color: pancakeColor[800]
                 ),),
               )
             ],
@@ -50,7 +50,7 @@ class BurgerTile extends StatelessWidget {
             child: Image.asset(imageName)
             ,),
             //Tarea: Texto del sabor del producto
-            Text(burgerFlavor,
+            Text(pancakeFlavor,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
